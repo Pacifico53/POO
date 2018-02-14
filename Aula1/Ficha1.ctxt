@@ -8,4 +8,6 @@ comment3.params=nome\ saldo
 comment3.target=java.lang.String\ criaDescricaoConta(java.lang.String,\ double)
 comment4.params=valor\ taxaConversao
 comment4.target=double\ eurosParaLibras(double,\ double)
-numComments=5
+comment5.params=num
+comment5.target=long\ factorial(int)
+numComments=6

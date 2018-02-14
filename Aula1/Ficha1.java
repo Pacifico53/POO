@@ -10,6 +10,14 @@ public class Ficha1
         return "Esta pessoa chama se "+nome+" e tem este saldo: "+saldo; 
     }
     public double eurosParaLibras(double valor, double taxaConversao){
-        return valor*0.89;
+        return valor*taxaConversao;
+    }
+    public long factorial(int num){
+        int i;
+        int r=1;
+        for(i=1;i<num;i++){
+            r *= i;
+        }
+        return r;
     }
 }
