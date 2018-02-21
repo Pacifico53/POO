@@ -44,5 +44,9 @@ public class ProgramaTesteFicha1
         n1 = sc.nextInt();
         long fact = f.factorial(n1);
         System.out.println("Factorial de "+n1+" é "+fact);
+        
+        //EXERCICIO 7
+        long tempo = f.tempoGasto();
+        System.out.println("Tempo gasto para calcular o factorial de 5000: "+ tempo);
     }
 }

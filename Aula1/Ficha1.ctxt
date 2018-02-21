@@ -10,4 +10,6 @@ comment4.params=valor\ taxaConversao
 comment4.target=double\ eurosParaLibras(double,\ double)
 comment5.params=num
 comment5.target=long\ factorial(int)
-numComments=6
+comment6.params=
+comment6.target=long\ tempoGasto()
+numComments=7

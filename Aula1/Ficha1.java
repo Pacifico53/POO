@@ -20,4 +20,11 @@ public class Ficha1
         }
         return r;
     }
+    public long tempoGasto(){
+        long start = System.currentTimeMillis();
+        long f = factorial(5000);
+        long end = System.currentTimeMillis();
+        long result = end - start;
+        return result;
+    }
 }
