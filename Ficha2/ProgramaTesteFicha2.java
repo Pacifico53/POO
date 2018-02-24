@@ -3,8 +3,10 @@ import java.util.Arrays;
 public class ProgramaTesteFicha2
 {
     public static void main(String[] args){
-        //FAZER ARRAY DE INTS INICIAL PARA USAR NOS EXERCICIOS
         Scanner sc = new Scanner(System.in);
+        //--------------------------------------EXERCICIO 1
+        //FAZER ARRAY DE INTS INICIAL PARA USAR NOS EXERCICIOS
+        System.out.println("----Exercicio 1----");
         System.out.println("Insere o tamanho da tua lista de numeros:");
         int size = sc.nextInt();
         int[] array = new int[size];
@@ -13,8 +15,7 @@ public class ProgramaTesteFicha2
             array[i] = sc.nextInt();
         }
         Inteiros lint = new Inteiros(array);
-        
-        //EXERCICIOS
+    
         System.out.println("Exercicio 1.\na) Min desse array: "+ lint.min());
         System.out.println("b) Insere dois indices para cortar o teu array:");
         int a = sc.nextInt();
@@ -31,5 +32,23 @@ public class ProgramaTesteFicha2
         }
         int[] arrayComp = lint.comparaDois(array2);
         System.out.println("Array com numeros iguais: "+ Arrays.toString(arrayComp));
+        
+        //-----------------------------------------EXERCICIO 2
+        System.out.println("----Exercicio 2----");
+        //FAZER ARRAY DE NOTAS DE ALUNOS INICIAL PARA USAR NOS EXERCICIOS
+        System.out.println("Insere numero de cadeiras");
+        int cadeiras = sc.nextInt();
+        System.out.println("Insere numero de alunos");
+        int alunos = sc.nextInt();
+        int[][] listaNotas = new int[cadeiras][alunos];
+        for(int i=0;i<cadeiras;i++){
+            System.out.println("Notas da cadeira " + (i+1) + ":");
+            for (int j=0;j<alunos;j++){
+                System.out.println("Aluno "+ (j+1) + ":");
+                listaNotas[i][j] = sc.nextInt();
+            }
+        }
+        notasTurma lnotas = new notasTurma(listaNotas);
+        System.out.println("a) Ler as notas dos alunos:");
     }
 }
