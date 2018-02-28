@@ -26,4 +26,17 @@ public class notasTurma
         }
         return soma;
     }
+    /**
+     * Ver a media das notas de um aluno
+     */
+    public float mediaAluno(int aluno){
+        float media = 0;
+        for(int i = 0;i<numeroCadeiras;i++){
+            for(int j = 0; j < numeroAlunos; j++){
+                if(j == aluno){media += notas[i][j];}
+            }
+        }
+        media /= numeroCadeiras;
+        return media;
+    }
 }

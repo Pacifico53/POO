@@ -57,5 +57,9 @@ public class ProgramaTesteFicha2
         System.out.println("b) Escolhe uma cadeira para calcular a soma das notas (index 0)");
         int cadeiraParaSomar = sc.nextInt();
         System.out.println("Soma das notas da cadeira "+ cadeiraParaSomar+": "+ lnotas.somaNotasCadeira(cadeiraParaSomar));
+        
+        System.out.println("c) Escolhe um aluno para calcular a media das notas (index 0):");
+        int alunoMedia = sc.nextInt();
+        System.out.println("A media do aluno "+ alunoMedia +" é "+ lnotas.mediaAluno(alunoMedia));        
     }
 }
