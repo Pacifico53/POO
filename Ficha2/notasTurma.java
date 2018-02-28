@@ -67,13 +67,13 @@ public class notasTurma
      * Dá uma lista de notas com valor acima do que o dado
      */
     public int[] notasAcima(int a){
-        int r[] = new int[256]; //TODO isto tem de ser feito doutra maneira
+        int r[] = new int[numeroAlunos * numeroCadeiras];
         int l = 0;
         for(int i = 0; i<numeroCadeiras; i++){
             for(int j = 0; j<numeroAlunos; j++){
                 if(notas[i][j] > a){r[l] = notas[i][j]; l++;}
             }
         }
-        return r;
+        return Arrays.copyOfRange(r, 0, l);
     }
 }
