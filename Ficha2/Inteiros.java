@@ -17,7 +17,7 @@ public class Inteiros
         return min;
     }
     /**
-     * Retorna matriz delimitada pelos dois indices atribuidos
+     * Retorna array delimitado pelos dois indices atribuidos
      */
     public int[] doisIndex(int a, int b){
         int[] res = Arrays.copyOfRange(listInts, a, b);

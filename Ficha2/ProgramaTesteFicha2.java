@@ -60,6 +60,10 @@ public class ProgramaTesteFicha2
         
         System.out.println("c) Escolhe um aluno para calcular a media das notas (index 0):");
         int alunoMedia = sc.nextInt();
-        System.out.println("A media do aluno "+ alunoMedia +" é "+ lnotas.mediaAluno(alunoMedia));        
+        System.out.println("A media do aluno "+ alunoMedia +" é "+ lnotas.mediaAluno(alunoMedia));
+        
+        System.out.println("d) A melhor nota de todas as cadeiras é: " + lnotas.melhorNota());
+        System.out.println("e) A pior nota de todas as cadeiras é: " + lnotas.piorNota());
+        
     }
 }
