@@ -35,7 +35,10 @@ public class ProgramaTesteFicha2
         
         //-----------------------------------------EXERCICIO 2
         System.out.println("----Exercicio 2----");
+        
         //FAZER ARRAY DE NOTAS DE ALUNOS INICIAL PARA USAR NOS EXERCICIOS
+        
+        System.out.println("a) Criar tabela de notas:");
         System.out.println("Insere numero de cadeiras");
         int cadeiras = sc.nextInt();
         System.out.println("Insere numero de alunos");
@@ -48,7 +51,11 @@ public class ProgramaTesteFicha2
                 listaNotas[i][j] = sc.nextInt();
             }
         }
-        notasTurma lnotas = new notasTurma(listaNotas);
-        System.out.println("a) Ler as notas dos alunos:");
+        
+        notasTurma lnotas = new notasTurma(listaNotas, cadeiras, alunos);
+        
+        System.out.println("b) Escolhe uma cadeira para calcular a soma das notas (index 0)");
+        int cadeiraParaSomar = sc.nextInt();
+        System.out.println("Soma das notas da cadeira "+ cadeiraParaSomar+": "+ lnotas.somaNotasCadeira(cadeiraParaSomar));
     }
 }
