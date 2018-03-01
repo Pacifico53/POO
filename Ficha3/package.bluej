@@ -1,7 +1,7 @@
 #BlueJ package file
 editor.fx.0.height=1080
-editor.fx.0.width=1127
-editor.fx.0.x=791
+editor.fx.0.width=1920
+editor.fx.0.x=0
 editor.fx.0.y=0
 objectbench.height=145
 objectbench.width=1894
@@ -34,6 +34,6 @@ target2.height=200
 target2.name=Telemovel
 target2.showInterface=false
 target2.type=ClassTarget
-target2.width=90
+target2.width=100
 target2.x=300
 target2.y=60
