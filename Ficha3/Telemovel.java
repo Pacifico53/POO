@@ -40,8 +40,8 @@ public class Telemovel
         this.resY = resYY;
         this.armazenamentoSMS = armazSMS;
         this.armazenamentoFotos = armazFotos;
-        this.armazenamentoApps = 0;
-        this.armazenamentoTotal = 0;
+        this.armazenamentoApps = armazApps;
+        this.armazenamentoTotal = armazFotos + armazApps;
         this.espacoOcupado = espacOcup;
         this.numeroFotos = nmroFotos;
         this.numeroApps = nmroApps;
@@ -71,10 +71,22 @@ public class Telemovel
         return this.marca;
     }
     /**
+     * Set da marca
+     */
+    public void setMarca(String newmarca){
+        this.marca = newmarca;
+    }
+    /**
      * Get do modelo
      */
     public String getModelo(){
         return this.modelo;
+    }
+    /**
+     * Set do modelo
+     */
+    public void setModelo(String newmodel){
+        this.modelo = newmodel;
     }
     /**
      * Get da resolucao X
@@ -83,10 +95,22 @@ public class Telemovel
         return this.resX;
     }
     /**
+     * Set da resolucao X
+     */
+    public void setResX(int newRes){
+        this.resX = newRes;
+    }
+    /**
      * Get da resolucao Y
      */
     public int getResY(){
         return this.resY;
+    }
+    /**
+     * Set da resolucao Y
+     */
+    public void setResY(int newRes){
+        this.resY = newRes;
     }
     /**
      * Get do armazenamento das sms
@@ -95,16 +119,34 @@ public class Telemovel
         return this.armazenamentoSMS;
     }
     /**
+     * Set do armazenamento SMS
+     */
+    public void setArmazSMS(int newArmaz){
+        this.armazenamentoSMS = newArmaz;
+    }
+    /**
      * Get do armazenamento das fotos
      */
     public int getArmazFotos(){
         return this.armazenamentoFotos;
     }
     /**
+     * Set do armazenamento Fotos
+     */
+    public void setArmazFotos(int newArmaz){
+        this.armazenamentoFotos = newArmaz;
+    }
+    /**
      * Get do armazenamento das apps
      */
     public int getArmazApps(){
         return this.armazenamentoApps;
+    }
+    /**
+     * Set do armazenamento apps
+     */
+    public void setArmazApps(int newArmaz){
+        this.armazenamentoApps = newArmaz;
     }
     /**
      * Get do armazenamento total (apps e fotos)
@@ -117,5 +159,57 @@ public class Telemovel
      */
     public int getEspacoOcupado(){
         return this.espacoOcupado;
+    }
+    /**
+     * Set do espaco ocupado
+     */
+    public void setEspacoOcupado(int newEspaco){
+        this.espacoOcupado = newEspaco;
+    }
+    /**
+     * Get do numero de fotos
+     */
+    public int getNumeroFotos(){
+        return this.numeroFotos;
+    }
+    /**
+     * Set do numero de fotos
+     */
+    public void setNumeroFotos(int newFotos){
+        this.numeroFotos = newFotos;
+    }
+    /**
+     * Get do numero apps
+     */
+    public int getNumeroApps(){
+        return this.numeroApps;
+    }
+    /**
+     * Get do nome das apps
+     */
+    public String[] getNomeApps(){
+        return this.nomeApps;
+    }
+    /**
+     * Diz se existe espaco para instalar certo ficheiro de X bytes
+     */
+    public boolean existeEspaco(int numeroBytes){
+        boolean r;
+        if(numeroBytes > (this.armazenamentoTotal + this.armazenamentoSMS - this.espacoOcupado)) r = false;
+            else r = true;
+        return r;
+    }
+    /**
+     * Instala uma aplicacao, dado o nome e o tamanho
+     */
+    public void instalaApp(String nome, int tamanho){
+        this.espacoOcupado += tamanho;
+        this.numeroApps++;
+        String[] tempArray = new String[this.numeroApps];
+        for (int i=0; i < this.numeroApps - 1; i++){
+            tempArray[i] = this.nomeApps[i];
+        }
+        tempArray[this.numeroApps - 1] = nome;
+        this.nomeApps = tempArray;
     }
 }
