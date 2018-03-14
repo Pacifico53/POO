@@ -5,6 +5,7 @@ public class Telemovel
     private int resX;
     private int resY;
     private int armazenamentoSMS;
+    private String[] mensagens;
     private int armazenamentoFotos;
     private int armazenamentoApps;
     private int armazenamentoTotal;
@@ -60,9 +61,7 @@ public class Telemovel
         this.armazenamentoApps = t.getArmazApps();
         this.armazenamentoTotal = t.getArmazTotal();
         this.espacoOcupado = t.getEspacoOcupado();
-        /*this.numeroFotos = t.getNmroFotos();
-        this.numeroApps = t.getNmroApps();
-        this.nomeApps = t.getNomeApps();*/
+        this.nomeApps = t.getNomeApps();
     }
     /**
      * Get da marca
